@@ -16,6 +16,11 @@ st.sidebar.write("""
 
 # MediaPipe Holistic setup
 mp_holistic = mp.solutions.holistic
+st.write("MediaPipe:", mp)
+st.write("Version:", getattr(mp, "__version__", "Unknown"))
+st.write("File:", getattr(mp, "__file__", "Unknown"))
+st.write("Has solutions:", hasattr(mp, "solutions"))
+st.write(dir(mp))
 mp_drawing = mp.solutions.drawing_utils
 
 holistic_model = mp_holistic.Holistic(
